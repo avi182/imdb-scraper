@@ -12,6 +12,6 @@ export class MoviesService {
 
   async getAllMovies(): Promise<Movie[]> {
     const urls = await this.movieLinksService.getLinks();
-    return await this.scrapeService.scrapeMovies(urls);
+    return this.scrapeService.scrapeMovies(urls);
   }
 }
